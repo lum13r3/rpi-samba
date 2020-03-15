@@ -13,10 +13,15 @@ docker run -d \
 --net=host \
 -v /opt:/share/opt \
 -v /:/share/ \
---name samba dastrasmue/rpi-samba:v3 \
+--name samba lum13r3/rpi-samba \
 -u "niclas:-Maurice31-" \
 -s "OPT Directory:/share/opt:rw:niclas"
 -s "MAIN Directory:/share/:rw:niclas"
+```
+
+##Build
+```
+docker build --rm --no-cache -t lum13r3/rpi-samba .
 ```
 
 This example will bind `smbd` to docker host ip address
