@@ -15,11 +15,11 @@ docker run -d \
 -v /:/share/ \
 --name samba lum13r3/rpi-samba \
 -u "niclas:-Maurice31-" \
--s "OPT Directory:/share/opt:rw:niclas"
+-s "OPT Directory:/share/opt:rw:niclas" \
 -s "MAIN Directory:/share/:rw:niclas"
 ```
 
-##Build
+## Build
 ```
 docker build --rm --no-cache -t lum13r3/rpi-samba .
 ```
