@@ -10,7 +10,6 @@ docker run -d \
 -p 445:445 \
 -p 445:445/udp \
 --restart='always' \
---net=host \
 -v /opt:/share/opt \
 -v /:/share/ \
 --name samba lum13r3/rpi-samba \
